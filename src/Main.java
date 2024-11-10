@@ -14,20 +14,20 @@ public class Main {
 
         System.out.println("\nTask 2");
         monthlyExpenses = new int[]{100, 500, 350, 400, 250};
-        int searchExpenses = -1;
+        int maxExpenses = -1;
         for (int expens : monthlyExpenses) {
-            if (expens > searchExpenses) {
-                searchExpenses = expens;
+            if (expens > maxExpenses) {
+                maxExpenses = expens;
             }
         }
-        System.out.println("Максимальная сумма трат за неделю составила " + searchExpenses + " рублей");
-
+        System.out.println("Максимальная сумма трат за неделю составила " + maxExpenses + " рублей");
+        int minExpenses = monthlyExpenses[0];
         for (int monthlyExpens : monthlyExpenses) {
-            if (monthlyExpens < searchExpenses) {
-                searchExpenses = monthlyExpens;
+            if (monthlyExpens < minExpenses) {
+                minExpenses = monthlyExpens;
             }
         }
-        System.out.println("Минимальная сумма трат за неделю составила " + searchExpenses + " рублей");
+        System.out.println("Минимальная сумма трат за неделю составила " + minExpenses + " рублей");
 
 
         System.out.println("\nTask 3");
